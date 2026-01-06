@@ -1,28 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Add Numbers</title>
 </head>
-
 <body>
 
-    <input id="twoDigit" type="number" placeholder="Enter two-digit number" />
-    <input id="twodigit" type="number" placeholder="Enter two-digit number" />
-    <button onclick="addNumbers()">Add</button>
+<input id="n1" type="number" placeholder="Enter two-digit number">
+<input id="n2" type="number" placeholder="Enter one-digit number">
+<button onclick="add()">Add</button>
 
-    <script>
-        function addNumbers() {
-            const twoDigit = Number(document.getElementById("twoDigit").value);
-            const oneDigit = Number(document.getElementById("oneDigit").value);
-            const sum = twoDigit + oneDigit;
-            alert("The sum is: " + sum);
-        }
-    </script>
+<p id="result"></p>
 
+<script>
+function add() {
+  let a = Number(document.getElementById("n1").value);
+  let b = Number(document.getElementById("n2").value);
+  document.getElementById("result").innerText =
+    "Answer: " + (a + b);
+}
+</script>
 
 </body>
-
 </html>
